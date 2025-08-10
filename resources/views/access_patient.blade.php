@@ -1,0 +1,15 @@
+@extends('base')
+
+@section('content')
+<div class="card shadow-lg p-4 mx-auto" style="max-width: 400px;">
+    <h3 class="text-center mb-4">Akses Pasien: {{ $patient->name }}</h3>
+    <form method="POST" action="{{ route('access_patient', $patient->id) }}">
+        @csrf
+        <div class="mb-3">
+            <label for="key" class="form-label">Key Akses</label>
+            <input type="text" name="key" id="key" class="form-control" placeholder="Masukkan Key Akses" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Akses</button>
+    </form>
+</div>
+@endsection

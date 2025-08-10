@@ -1,0 +1,42 @@
+/* Existing styles (assumed, as original style.css content was not provided) */
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+/* New styles for image preview and form */
+.face-image-preview {
+    max-height: 200px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.collapsible-form {
+    transition: max-height 0.3s ease-out;
+}
+
+.form-wrapper {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.shake-on-focus:focus {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+video, canvas {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
